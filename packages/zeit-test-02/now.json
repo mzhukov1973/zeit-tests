@@ -2,20 +2,16 @@
  "version": 2,
  "name": "zeit-test-02,
  "alias": [ "zeit-test-02.umbra-translucens.online" ],
- "env": {
-   "SECRET":"@my-secret-001"
- },
- "regions": [ "bru" ],
  "public": false,
  "builds": [
-   { "src":"/index.js",        "use":"@now/node"   },
-   { "src":"/favicon.ico",     "use":"@now/static" },
-   { "src":"/404.html",        "use":"@now/html-minifier" }
+   { "src":"/index.js",    "use":"@now/node"          },
+   { "src":"/favicon.ico", "use":"@now/static"        },
+   { "src":"/404.html",    "use":"@now/html-minifier" }
  ],
  "routes": [
-   { "src":"",                  "dest":"/index.js",      "headers":{ "cache-control":"s-maxage=0"                  } },
-   { "src":"^/index.js",        "dest":"/index.js",      "headers":{ "cache-control":"s-maxage=0"                  } },
-   { "src":"^/favicon.ico",     "dest":"/favicon.ico",   "headers":{ "cache-control":"s-maxage=31536000,immutable" } },
-   { "src":"^/(.*)",            "dest":"/404.html"                                                                 } }
+   { "src":"",              "dest":"/index.js"              } },
+   { "src":"^/index.js",    "dest":"/index.js"                } },
+   { "src":"^/favicon.ico", "dest":"/favicon.ico",   "headers":{ "cache-control":"s-maxage=31536000,immutable" } },
+   { "src":"^/(.*)",        "dest":"/404.html"                                                                 } }
  ]
 }
