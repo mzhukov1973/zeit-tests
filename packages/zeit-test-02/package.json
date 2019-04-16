@@ -1,0 +1,21 @@
+{
+  "name": "zeit-test-02",
+  "short_name": "Zeitβ|²",
+  "description": "An app to test some Node.js stuff (streams, sockets, ffmpeg etc) when deployed at Zeit™.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxim Zhukov",
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": "https://zeit-test-02.umbra-translucens.online",
+  "dependencies": {},
+  "bundleDependencies": [],
+  "bugs": {
+    "email":"mzhukov31415dev@gmail.com",
+    "url":"https://github.com/mzhukov1973/zeit-test-02/issues"
+  },
+ "repository":"git+https://github.com/mzhukov1973/zeit-test-02"
+}
