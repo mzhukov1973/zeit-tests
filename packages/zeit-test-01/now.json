@@ -2,7 +2,6 @@
  "public": false,
  "alias": ["zeit-test-01.umbra-translucens.online"],
  "builds": [
-
    { "src":"/index.html",    "use":"@now/html-minifier" }
  ],
  "routes": [
