@@ -1,4 +1,10 @@
 {
  "public": false,
- "alias": ["zeit-test-01.umbra-translucens.online"]
+ "alias": ["zeit-test-01.umbra-translucens.online"],
+ "builds": [
+   {"src":"/index.html", "use":"@now/html-minifier"}
+ ],
+ "routes": [
+   {"src":"(.*)", "dest":"/index.html"}
+ ]
 }
