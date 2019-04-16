@@ -5,6 +5,6 @@
    {"src":"/index.html", "use":"@now/html-minifier"}
  ],
  "routes": [
-   {"src":"(.*)", "dest":"/index.html"}
+   {"src":"^/(.*)", "dest":"/index.html"}
  ]
 }
