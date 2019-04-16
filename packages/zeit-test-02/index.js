@@ -1,5 +1,5 @@
 /*
-  A test if streams, socket-based i/o & ffmpeg.
+  A test of streams, socket-based i/o & ffmpeg.
 */
 
 const fs       = require('fs')
