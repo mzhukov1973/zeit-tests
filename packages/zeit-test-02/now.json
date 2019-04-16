@@ -13,6 +13,7 @@
    { "src":"/404.html",        "use":"@now/html-minifier" }
  ],
  "routes": [
+   { "src":"",                  "dest":"/index.js",      "headers":{ "cache-control":"s-maxage=0"                  } },
    { "src":"^/index.js",        "dest":"/index.js",      "headers":{ "cache-control":"s-maxage=0"                  } },
    { "src":"^/favicon.ico",     "dest":"/favicon.ico",   "headers":{ "cache-control":"s-maxage=31536000,immutable" } },
    { "src":"^/(.*)",            "dest":"/404.html"                                                                 } }
