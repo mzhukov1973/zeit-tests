@@ -8,7 +8,7 @@
 
 **License:** ```Apache-2.0```
 
-**Author:** Maxim Zhukov, [email](mailto:mzhukov31415dev@gmail.com), [GitHub](https://github.com/mzhukov1973).
+**Author:** Maxim Zhukov, [e-mail](mailto:mzhukov31415dev@gmail.com), [GitHub](https://github.com/mzhukov1973).
 
 <hr>
 
