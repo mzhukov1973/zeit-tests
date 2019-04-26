@@ -41,6 +41,7 @@
   "files": [
     "build/index.js",
     "build/public",
+    "build/source_files",
     "build/public/index.html",
     "build/public/404.html",
     "build/logs"
