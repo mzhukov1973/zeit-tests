@@ -18,6 +18,6 @@
 
 ### ToDo:
 
- [ ] Get rid of `@now/node-server`, move to pure **`λ`** with `@now/node` builder.
- [ ] Make proper use of Zeit™ `@now/Node` builder to build stuff, move it to `dist` (`build`) folder and publish via Zeit™ Now™ automatically, as intended by the builder.
- [ ] ...
+- [ ] Get rid of `@now/node-server`, move to pure **`λ`** with `@now/node` builder.
+- [ ] Make proper use of Zeit™ `@now/Node` builder to build stuff, move it to `dist` (`build`) folder and publish via Zeit™ Now™ automatically, as intended by the builder.
+- [ ] ...
