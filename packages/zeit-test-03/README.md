@@ -1,5 +1,5 @@
 # Zeitᵦ|³
-#### A Zeit™-based `λ` to stream a file via websocket. [`[Node.js]`](https://nodejs.org)
+#### A Zeit™-based [`λ`](https://zeit.co/docs/v2/deployments/concepts/lambdas) to stream a file via websocket. [`[Node.js]`](https://nodejs.org)
 ###### *An app from apps suite to test some Node.js stuff (streams, sockets, ffmpeg etc) when deployed at Zeit™.*
 
 <hr>
