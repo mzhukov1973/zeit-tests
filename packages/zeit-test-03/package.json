@@ -1,0 +1,61 @@
+{
+  "name": "zeit-test-03",
+  "short_name": "Zeitᵦ|³",
+  "description": "A Zeit™-based `λ` to stream a file via websocket.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxim Zhukov",
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": "https://zeit-test-03.umbra-translucens.online",
+  "dependencies": {
+    "colors": "latest"
+  },
+  "bundleDependencies": [
+    "colors"
+  ],
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bugs": {
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973/zeit-test-03/issues"
+  },
+  "repository": "git+https://github.com/mzhukov1973/zeit-test-03",
+  "main": "build/index.js",
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "build": "bash build.sh",
+    "run": "cd build && node index.js && cd ..",
+    "deploy": "cd build && now && now alias && cd ..",
+    "bnr": "npm run build && npm run run",
+    "bnd": "npm run build && npm run deploy"
+  },
+  "files": [
+    "build/index.js",
+    "build/public/index.html",
+    "build/logs"
+  ],
+  "engines": {
+    "node": ">=11.12.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ]
+  }
+}
