@@ -1,14 +1,18 @@
 {
- "alias": [ "zeit-test-02.umbra-translucens.online" ],
- "public": false,
+ "version": 2,
+ "name":    "zeit-test-02",
+ "public":  false,
+ "alias": [
+   "zeit-test-02.umbra-translucens.online"
+ ],
  "builds": [
    { "src":"/index.js",    "use":"@now/node"          },
    { "src":"/favicon.ico", "use":"@now/static"        },
    { "src":"/404.html",    "use":"@now/html-minifier" }
  ],
  "routes": [
-   { "src":"^/(.*).html",   "dest":"/404.html"                                                                 },
-   { "src":"^/favicon.ico", "dest":"/favicon.ico", "headers":{"cache-control":"s-maxage=31536000,immutable"} },
-   { "src":"^/(.*)",        "dest":"/index.js"                                                                 }
+   { "src":"^/(.*).html",   "dest":"/404.html",    "headers":{"cache-control":"s-maxage=86400"} },
+   { "src":"^/favicon.ico", "dest":"/favicon.ico", "headers":{"cache-control":"s-maxage=86400"} },
+   { "src":"^/(.*)",        "dest":"/index.js",    "headers":{"cache-control":"s-maxage=600"}   }
  ]
 }
