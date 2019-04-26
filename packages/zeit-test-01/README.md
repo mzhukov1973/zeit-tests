@@ -1,4 +1,4 @@
-# Zeitβ|¹
+# Zeitᵦ|¹
 #### Zeit™ test app #1 - trying out auto-deployment for every push with [Zeit™](https://zeit.co) [Now™](https://zeit.co/now). `[static]`
 ###### *An app from apps suite to test some Node.js stuff (streams, sockets, ffmpeg etc) when deployed at Zeit™.*
 <hr>
