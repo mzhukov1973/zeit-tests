@@ -18,23 +18,17 @@
 
 - [x] <sup>**0.0.2**</sup> <del>Fix problem with simultaneous `@now/static-build` & `@now/node` builds.</del> <sub>*(Moved back to pre-building the deployment package (in this case only a single transpile of `src/index.js` to `index.js`) and manually deploying it via `now; now alias`. To prevent (failed) attempts to autodeploy on GitHub™ commits added `/index.js` to `.gitignore`.)*</sub>
 
-  - [x] <sup>**0.0.2**</sup> <del>Forbid autodeployments on GitHub™ commits via a proper `now.json` setting (as opposed to hiding the `@now/node` builder source file `/index.js`, which leads to unnecessary error messages from Now™ GitHub™ bot).</del>
+  - [x] <sup>**0.0.2**</sup> <del>Forbid autodeployments on GitHub™ commits via a proper `now.json` setting (as opposed to hiding the `@now/node` builder source file `/index.js`, which leads to unnecessary error messages from Now™ GitHub™ bot).</del> <sub>*(Added **`..."github":{"enabled":false,...}...`** to `now.json`. Proved to be a very much self-evident proposition.)*</sub>
   
 - [x] <sup>**0.0.2**</sup> <del>Generate and setup required logos & icons.</del>
 
-- [ ] <sup>**0.0.2**</sup> Add a simplest stream retranslation service (anything - e.g. a simple file would do) [push logic]:
+- [ ] <sup>**0.0.2**</sup> Add a simplest stream retranslation service (a bounce - you upload a file and immediately get it back as a download. [push logic]:
 
-  - [ ] <sup>**0.0.2**</sup> Detect incoming stream at one port and
+  - [ ] <sup>**0.0.2**</sup> Add a simple (stream) transform for the file, e.g. on-the-fly compression.
   
-  - [ ] <sup>**0.0.2**</sup> Broadcast it via another port, unchanged.
+  - [ ] <sup>**0.0.2**</sup> Measure performance with a ~1GB file streamed to and back from the **`λ`** in question.
 
-- [ ] <sup>**0.0.2**</sup> Add simplest stream retranslation service (anything - e.g. a simple file would do) [pull logic]:
-
-  - [ ] <sup>**0.0.2**</sup> Detect request for the stream at one port and
-  
-  - [ ] <sup>**0.0.2**</sup> Access the pre-set source stream at another port and
-  
-  - [ ] <sup>**0.0.2**</sup> Serve the (unchanged) source stream to the requesting client.
+  - [ ] <sup>**0.0.2**</sup> Implement a C-based transformer utility of the same semantics, deploy it, measure & compare performance gain, if any.
 
 - [ ] <sup><sup>0.0.3</sup></sup> Add HLS video stream retranslation service [push logic]:
 
@@ -57,6 +51,7 @@
 - [ ] <sup><sup>0.0.5</sup></sup> Add serving clients' web interface.
 
 - [ ] <sup><sup>0.0.6</sup></sup> Add some convenient form of authentication for push logic stream retranslation scheme for both:
+
   - [ ] <sup><sup>0.0.6</sup></sup> Client, providing the source HLS stream and
   
   - [ ] <sup><sup>0.0.6</sup></sup> Client, consuming the retranslated (broadcasting) HLS stream.
