@@ -49,6 +49,7 @@ const htmlOutput = "<!doctype html>\n"                                          
                    "     justify-content: center;\n"                                                                                                               +
                    "     align-items: center;\n"                                                                                                                   +
                    "     height:100%;\n"                                                                                                                           +
+                   "     width:100%;\n"                                                                                                                           +
                    "   }\n"                                                                                                                                        +
                    "   .cont_int {\n"                                                                                                                              +
                    "     display:flex;\n"                                                                                                                          +
@@ -60,14 +61,29 @@ const htmlOutput = "<!doctype html>\n"                                          
                    "     order:1;\n"                                                                                                                               +
                    "     flex-grow:0;\n"                                                                                                                           +
                    "     font-size:1.5rem;\n"                                                                                                                      +
+                   "     display:flex;\n"                                                                                                                          +
+                   "     flex-flow: column nowrap;\n"                                                                                                              +
+                   "     justify-content: center;\n"                                                                                                               +
+                   "     align-items: center;\n"                                                                                                                   +
                    "   }\n"                                                                                                                                        +
                    "   .cont_int_02 {\n"                                                                                                                           +
                    "     order:2;\n"                                                                                                                               +
                    "     flex-grow:1;\n"                                                                                                                           +
                    "     font-size:4rem;\n"                                                                                                                        +
+                   "     display:flex;\n"                                                                                                                          +
+                   "     flex-flow: column nowrap;\n"                                                                                                              +
+                   "     justify-content: center;\n"                                                                                                               +
+                   "     align-items: center;\n"                                                                                                                   +
                    "   }\n"                                                                                                                                        +
                    "   html,body {\n"                                                                                                                              +
                    "     height:calc(100% - 4rem);\n"                                                                                                              +
+                   "   }\n"                                                                                                                                        +
+                   "   .placeholder {\n"                                                                                                                           +
+                   "     font-family: monospace;\n"                                                                                                                +
+                   "     color:rgba(110,110,110,1);\n"                                                                                                             +
+                   "   }\n"                                                                                                                                        +
+                   "   h1,h2,h3,h4,h5,h6 {\n"                                                                                                                      +
+                   "     align-text:center;\n"                                                                                                                     +
                    "   }\n"                                                                                                                                        +
                    "  </style>\n"                                                                                                                                  +
                    " </head>\n"                                                                                                                                    +
@@ -82,6 +98,8 @@ const htmlOutput = "<!doctype html>\n"                                          
                    "    <h3><code>index.js</code> - done.</h3>\n"                                                                                                  +
                    "    <hr width='100%'>\n"                                                                                                                       +
                    "    <h4><em>Yes, really done.</em></h4>\n"                                                                                                     +
+                   "    <hr width='100%'>\n"                                                                                                                       +
+                   "    <h6 class='placeholder'><em>...placeholder for some diagnostic message (if available)...</em></h6>\n"                                      +
                    "   </div>\n"                                                                                                                                   +
                    "  </div>\n"                                                                                                                                    +
                    " </body>\n"                                                                                                                                    +
