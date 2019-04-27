@@ -1,5 +1,5 @@
 # Zeitᵦ|²
-#### Zeit™ test app #2 - trying out auto-deployment for every push with [Zeit™](https://zeit.co) [Now™](https://zeit.co/now). [`[Node.js]`](https://nodejs.org)
+#### Zeit™ test app #2 - trying out auto-deployment for every push with [Zeit™](https://zeit.co) [Now™](https://zeit.co/now). Receives an HLS stream and streams it back at a different port. [`[Node.js]`](https://nodejs.org)
 ###### *An app from apps suite to test some Node.js stuff (streams, sockets, ffmpeg etc) when deployed at Zeit™.*
 
 <hr>
