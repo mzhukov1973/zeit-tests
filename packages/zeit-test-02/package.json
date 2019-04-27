@@ -1,7 +1,7 @@
 {
   "name": "zeit-test-02",
   "short_name": "Zeitᵦ|²",
-  "description": "An app to test some Node.js stuff (streams, sockets, ffmpeg etc) when deployed at Zeit™. Receives an HLS stream and streams it back at a different port.",
+  "description": "An app to test some Node.js stuff (streams, sockets, ffmpeg etc) when deployed at Zeit™. Receives an HLS stream and streams it back from a different port.",
   "version": "0.0.1",
   "author": {
     "name": "Maxim Zhukov",
@@ -27,35 +27,27 @@
   "repository": "git+https://github.com/mzhukov1973/zeit-test-02",
   "main": "index.js",
   "scripts": {
-    "lint": "eslint src/*.js",
-    "build": "bash build.sh",
+    "lint":   "eslint src/*.js",
+    "build":  "bash build.sh",
     "deploy": "now && now alias",
-    "bnd": "npm run build && npm run deploy"
+    "bnd":    "npm run build && npm run deploy"
   },
   "files": [
     "index.js",
-    "*.ico",
-    "*.png",
-    "*.svg",
-    "*.css",
-    "*.woff2",
-    "*.html",
-    "*.json",
-    "logs"
+    "*ico",
+    "*png",
+    "*svg",
+    "*css",
+    "*woff2",
+    "*html",
+    "*json",
+    "logs",
+    "logs/*log"
   ],
   "engines": {
     "node": ">=8.10.0"
   },
   "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": true
-          }
-        }
-      ]
-    ]
+    "presets": [[ "@babel/preset-env", {"targets":{"node":true}} ]]
   }
 }
