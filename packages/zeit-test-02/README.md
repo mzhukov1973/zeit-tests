@@ -22,13 +22,13 @@
   
 - [x] <sup>**0.0.2**</sup> <del>Generate and setup required logos & icons.</del>
 
-- [ ] <sup>**0.0.2**</sup> Add a simple quasi real-time monitor interface, to display current status of (the) retranslation.
-
 - [ ] <sup><sup>0.0.3</sup></sup> Add simple HLS video stream retranslation service (push logic):
 
   - [ ] <sup><sup>0.0.3</sup></sup> Detect incoming HLS stream at one port and
   
   - [ ] <sup><sup>0.0.3</sup></sup> Broadcast it via another port, unchanged.
+
+- [ ] <sup><sup>0.0.3</sup></sup> Add a simple quasi real-time monitor interface, to display current status of (the) retranslation.
 
 - [ ] <sup><sup>0.0.4</sup></sup> Add simple HLS video stream retranslation service (pull logic):
 
