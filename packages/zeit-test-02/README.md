@@ -1,5 +1,5 @@
 # Zeitᵦ|²
-#### Zeit™ test app #2 - trying out auto-deployment for every push with [Zeit™](https://zeit.co) [Now™](https://zeit.co/now). Receives an HLS stream and streams it back at a different port. [`[Node.js]`](https://nodejs.org)
+#### Zeit™ test app #2 - trying out auto-deployment for every push with [Zeit™](https://zeit.co) [Now™](https://zeit.co/now). Receives an HLS stream and streams it back from a different port. [`[Node.js]`](https://nodejs.org)
 ###### *An app from apps suite to test some Node.js stuff (streams, sockets, ffmpeg etc) when deployed at Zeit™.*
 
 <hr>
@@ -18,7 +18,7 @@
 
 - [x] <sup>**0.0.2**</sup> <del>Fix problem with simultaneous `@now/static-build` & `@now/node` builds.</del> <sub>*(Moved back to pre-building the deployment package (in this case only a single transpile of `src/index.js` to `index.js`) and manually deploying it via `now; now alias`. To prevent (failed) attempts to autodeploy on GitHub™ commits added `/index.js` to `.gitignore`.)*</sub>
 
-  - [x] <sup>**0.0.2**</sup> <del>Forbid autodeployments on GitHub™ commits via a proper `now.json` setting (as opposed to hiding the `@now/node` builder source file `/index.js`, which leads to unnecessary error messages from Now™ GitHub™ bot).</del> <sub>*(Added **`..."github":{"enabled":false,...}...`** to `now.json`. Proved to be a very much self-evident proposition.)*</sub>
+  - [x] <sup>**0.0.2**</sup> <del>Forbid autodeployments on GitHub™ commits via a proper `now.json` setting (as opposed to hiding the `@now/node` builder source file `/index.js`, which leads to unnecessary error messages from Now™ GitHub™ bot).</del> <sub>*(Added `..."github":{"enabled":false,...}...` to `now.json`. Proved to be a very much self-evident proposition.)*</sub>
   
 - [x] <sup>**0.0.2**</sup> <del>Generate and setup required logos & icons.</del>
 
