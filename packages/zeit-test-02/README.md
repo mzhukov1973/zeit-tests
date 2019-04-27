@@ -22,6 +22,8 @@
   
 - [x] <sup>**0.0.2**</sup> <del>Generate and setup required logos & icons.</del>
 
+- [ ] <sup>**0.0.2**</sup> Add a simple quasi real-time monitor interface, to display current status of (the) retranslation.
+
 - [ ] <sup><sup>0.0.3</sup></sup> Add simple HLS video stream retranslation service (push logic):
 
   - [ ] <sup><sup>0.0.3</sup></sup> Detect incoming HLS stream at one port and
@@ -36,8 +38,6 @@
   
   - [ ] <sup><sup>0.0.4</sup></sup> Serve the (unchanged) source stream to the requesting client.
 
-- [ ] <sup>**0.0.2**</sup> Add a simple quasi real-time monitor interface, to display current status of (the) retranslation.
-
 - [ ] <sup><sup>0.0.5</sup></sup> Add some convinient form of authentication for push logic stream retranslation scheme for both:
   - [ ] <sup><sup>0.0.5</sup></sup> Client, providing the source HLS stream and
   
@@ -45,7 +45,7 @@
 
 - [ ] <sup><sup>0.0.6</sup></sup> Add some convinient form of authentication for pull logic stream retranslation scheme for both:
 
-  - [ ] <sup><sup>0.0.6</sup></sup> Server, providing us with the source HLS stream (it authenticates with us, which grants it the power to setup our credentials, to authenticate with it, when we receive a clients' request and in turn request it to provide us with the source HLS stream) and
+  - [ ] <sup><sup>0.0.6</sup></sup> Server, providing us with the source HLS stream (it authenticates with us, which grants it the power to setup our credentials to authenticate with it when we receive a clients' request and in turn request it to provide us with the source HLS stream) and
 
   - [ ] <sup><sup>0.0.6</sup></sup> Client, requesting the retranslated HLS stream from us.
   
