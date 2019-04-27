@@ -22,5 +22,11 @@
    { "src":"^/(.*).css",   "dest":"/$1.ico",   "headers":{"cache-control":"s-maxage=86400"} },
    { "src":"^/404.html",   "dest":"/404.html", "headers":{"cache-control":"s-maxage=86400"} },
    { "src":"^/(.*)",       "dest":"/index.js", "headers":{"cache-control":"s-maxage=600"}   }
- ]
+ ],
+ "github": {
+   "enabled":            false,
+   "autoAlias":          true,
+   "autoJobCancelation": true,
+   "silent":             false
+ }
 }
