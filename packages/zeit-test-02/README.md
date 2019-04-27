@@ -16,7 +16,7 @@
 
 ### ToDo:
 
-- [x] <sup>**0.0.2**</sup> <del>Fix problem with simultaneous `@now/static-build` & `@now/node` builds.</del> *(Moved back to pre-building the deployment package (in this case only a single transpile of `src/index.js` to `index.js`) and manually deploying it via `now; now alias`. To prevent (failed) attempts to autodeploy on GitHub™ commits added `/index.js` to `.gitignore`.)*
+- [x] <sup>**0.0.2**</sup> <del>Fix problem with simultaneous `@now/static-build` & `@now/node` builds.</del> <sub>*(Moved back to pre-building the deployment package (in this case only a single transpile of `src/index.js` to `index.js`) and manually deploying it via `now; now alias`. To prevent (failed) attempts to autodeploy on GitHub™ commits added `/index.js` to `.gitignore`.)*</sub>
 
   - [ ] <sup>**0.0.2**</sup> Forbid autodeployments on GitHub™ commits via a proper `now.json` setting (as opposed to hiding the `@now/node` builder source file `/index.js`, which leads to unnecessary error messages from Now™ GitHub™ bot).
   
