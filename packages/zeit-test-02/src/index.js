@@ -76,7 +76,7 @@ const htmlOutput = "<!doctype html>\n"                                          
                    "   <div class='cont_int cont_int_01'>\n"                                                                                                       +
                    "    <h1>Zeitᵦ|²</h1>\n"                                                                                                                        +
                    "    <h5>(Zeit Test 02)</h5>\n"                                                                                                                 +
-                   "    <h6>Zeit™ Now™ builder:&nbsp;<code>@now/node</code></h6>\n"                                                                                +
+                   "    <h6>Zeit™ Now™ builder:&nbsp;<code>@now/node</code> with a pre-build step.</h6>\n"                                                         +
                    "   </div>\n"                                                                                                                                   +
                    "   <div class='cont_int cont_int_02'>\n"                                                                                                       +
                    "    <h3><code>index.js</code> - done.</h3>\n"                                                                                                  +
