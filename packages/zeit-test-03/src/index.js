@@ -14,7 +14,6 @@
 /*  limitations under the License.                                            */
 /******************************************************************************/
 import colors          from 'colors'
-import http            from 'http'
 import fs              from 'fs'
 
 const colorsTheme       = {RST:['reset'],U:['underline'],B:['bold'],YD:['yellow','dim'],YN:['yellow'],YB:['yellow','bold'],WD:['white','dim'],WN:['white'],WB:['white','bold'],WDU:['white','dim','underline'],WNU:['white','underline'],WBU:['white','bold','underline'],RD:['red','dim'],RN:['red'],RB:['red','bold'],GD:['green','dim'],GN:['green'],GB:['green','bold'],CD:['cyan','dim'],CN:['cyan'],CB:['cyan','bold'],MD:['magenta','dim'],MN:['magenta'],MB:['magenta','bold'],MDU:['magenta','dim','underline'],MNU:['magenta','underline'],MBU:['magenta','bold','underline']}
@@ -25,12 +24,30 @@ colors.setTheme(colorsTheme)
 const logPrefix = c.YN('[')+c.MBU('Zeitβ|³')+c.YN('/')+c.WBU('index.js')+c.YN(']: ')
 
 const httpConfig = {
-  port: 8001,
-  host: '127.0.0.1',
+  port: 8003,
+  host: '127.0.0.3',
   webroot: 'public'
 }
 
-const httpSrv = http.createServer()
-console.log(logPrefix+'HTTP server instance created, listening at port:'+c.MN(httpConfig.port)+'.')
+//const httpSrv = http.createServer()
+//httpSrv.listen(httpConfig.port)
+//console.log(logPrefix+'HTTP server instance created, listening at port:'+c.MN(httpConfig.port)+'.')
 
-httpSrv.listen(httpConfig.port)
+
+
+/*********************************************************************************************************************************************/
+/* For local tests only:                                                                                                                     */
+const StaticServer        = require('static-server')
+const staticServerOptions = {
+  rootPath:      './'+httpConfig.webroot,
+  port:          httpConfig.port,
+  name:          'zeit-test-03/static-http-server',
+  host:          httpConfig.host,
+  cors:          '*',
+  followSymlink: true,
+  templates:     { index: 'index.html', notFound: '404.html' }
+}
+const staticSrv           = new StaticServer(staticServerOptions)
+
+staticSrv.start(()=>console.log('zeit-test-03 static server: server is listening on', staticSrv.port))
+/*********************************************************************************************************************************************/

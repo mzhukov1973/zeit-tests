@@ -12,10 +12,12 @@
   "private": true,
   "homepage": "https://zeit-test-03.umbra-translucens.online",
   "dependencies": {
-    "colors": "latest"
+    "colors": "latest",
+    "static-server": "latest"
   },
   "bundleDependencies": [
-    "colors"
+    "colors",
+    "static-server"
   ],
   "devDependencies": {
     "@babel/cli": "latest",
@@ -34,16 +36,14 @@
     "lint": "eslint src/*.js",
     "build": "bash build.sh",
     "run": "cd build && node index.js && cd ..",
-    "deploy": "cd build && now && now alias && cd ..",
     "bnr": "npm run build && npm run run",
+    "deploy": "cd build && now && now alias && cd ..",
     "bnd": "npm run build && npm run deploy"
   },
   "files": [
     "build/index.js",
     "build/public",
     "build/source_files",
-    "build/public/index.html",
-    "build/public/404.html",
     "build/logs"
   ],
   "engines": {
