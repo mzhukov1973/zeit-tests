@@ -24,18 +24,12 @@
    "email":"mzhukov31415dev@gmail.com",
    "url":"https://github.com/mzhukov1973/zeit-test-02/issues"
  },
- "repository":"git+https://github.com/mzhukov1973/zeit-test-02"
+ "repository":"git+https://github.com/mzhukov1973/zeit-test-02",
  "main": "build/index.js",
  "scripts": {
    "lint":   "eslint src/*.js",
    "now-build": "bash build.sh"
  },
- "files": [
-   "build",
-   "build/logs",
-   "build/logs/*",
-   "build/*"
- ],
  "engines": {
    "node": ">=11.12.0"
  },
