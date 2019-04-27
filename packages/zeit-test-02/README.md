@@ -38,15 +38,16 @@
   
   - [ ] <sup><sup>0.0.4</sup></sup> Serve the (unchanged) source stream to the requesting client.
 
-- [ ] <sup><sup>0.0.5</sup></sup> Add some convinient form of authentication for push logic stream retranslation scheme for both:
-  - [ ] <sup><sup>0.0.5</sup></sup> Client, providing the source HLS stream and
+- [ ] <sup><sup>0.0.5</sup></sup> Make monitor interface into a proper PWA (installable and all) - will serve as a basis for the (future) client app.
+
+- [ ] <sup><sup>0.0.6</sup></sup> Add some convinient form of authentication for push logic stream retranslation scheme for both:
+  - [ ] <sup><sup>0.0.6</sup></sup> Client, providing the source HLS stream and
   
-  - [ ] <sup><sup>0.0.5</sup></sup> Client, consuming the retranslated (broadcasting) HLS stream.
+  - [ ] <sup><sup>0.0.6</sup></sup> Client, consuming the retranslated (broadcasting) HLS stream.
 
-- [ ] <sup><sup>0.0.6</sup></sup> Add some convinient form of authentication for pull logic stream retranslation scheme for both:
+- [ ] <sup><sup>0.0.7</sup></sup> Add some convinient form of authentication for pull logic stream retranslation scheme for both:
 
-  - [ ] <sup><sup>0.0.6</sup></sup> Server, providing us with the source HLS stream (it authenticates with us, which grants it the power to setup our credentials to authenticate with it when we receive a clients' request and in turn request it to provide us with the source HLS stream) and
+  - [ ] <sup><sup>0.0.7</sup></sup> Server, providing us with the source HLS stream (it authenticates with us, which grants it the power to setup our credentials to authenticate with it when we receive a clients' request and in turn request it to provide us with the source HLS stream) and
 
-  - [ ] <sup><sup>0.0.6</sup></sup> Client, requesting the retranslated HLS stream from us.
+  - [ ] <sup><sup>0.0.7</sup></sup> Client, requesting the retranslated HLS stream from us.
   
-- [ ] <sup><sup>...</sup></sup> ...
