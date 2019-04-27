@@ -28,7 +28,7 @@
  "main": "build/index.js",
  "scripts": {
    "lint":   "eslint src/*.js",
-   "now-build": "bash build.sh"
+   "now-build": "bash build2.sh"
  },
  "engines": {
    "node": ">=8.10.0"
