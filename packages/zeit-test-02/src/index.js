@@ -94,5 +94,21 @@ const htmlOutput = "<!doctype html>\n"                                          
 
 
 module.exports = (req,res) => {
+// 1. Check if req is a POST request with path set to '/post_bounce'.
+// 2. If not, then dump the default html content (maybe with some small diagnostic hint) and otherwise ignore req.
+// 3. If it is and it is then pipe the incoming stream (a file that is being uploaded) back to res and send it back, so that user downlads the same file they've just uploaded. N.B.: Store nothing on disk! The entire operation should be kept in 'on the fly' mode.
+
+
+//  - a simplest bounce:
+// req.pipe(res)
+
+
+//  - change the name of output file (add a '.gz' suffix) and pipe it back through the gzip transformer stream:
+// req.pipe(gzip).pipe(res)
+
+//  - add a simple memory consumption monitor and a couple of timers (CPU time and real time).
+//  - measure performance when compressing a ~1GB file. Confirm backpressure does indeed automagically works.
+
+//  - Not the req we want, ignore it and dump standard html content:
   res.end(htmlOutput)
 }
