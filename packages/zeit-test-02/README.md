@@ -22,7 +22,21 @@
   
 - [x] <sup>**0.0.2**</sup> <del>Generate and setup required logos & icons.</del>
 
-- [ ] <sup><sup>0.0.3</sup></sup> Add simple HLS video stream retranslation service (push logic):
+- [ ] <sup>**0.0.2**</sup> Add a simplest stream retranslation service (anything - e.g. a simple file would do) [push logic]:
+
+  - [ ] <sup>**0.0.2**</sup> Detect incoming stream at one port and
+  
+  - [ ] <sup>**0.0.2**</sup> Broadcast it via another port, unchanged.
+
+- [ ] <sup>**0.0.2**</sup> Add simplest stream retranslation service (anything - e.g. a simple file would do) [pull logic]:
+
+  - [ ] <sup>**0.0.2**</sup> Detect request for the stream at one port and
+  
+  - [ ] <sup>**0.0.2**</sup> Access the pre-set source stream at another port and
+  
+  - [ ] <sup>**0.0.2**</sup> Serve the (unchanged) source stream to the requesting client.
+
+- [ ] <sup><sup>0.0.3</sup></sup> Add HLS video stream retranslation service [push logic]:
 
   - [ ] <sup><sup>0.0.3</sup></sup> Detect incoming HLS stream at one port and
   
@@ -30,7 +44,7 @@
 
 - [ ] <sup><sup>0.0.3</sup></sup> Add a simple quasi real-time monitor interface, to display current status of (the) retranslation.
 
-- [ ] <sup><sup>0.0.4</sup></sup> Add simple HLS video stream retranslation service (pull logic):
+- [ ] <sup><sup>0.0.4</sup></sup> Add HLS video stream retranslation service [pull logic]:
 
   - [ ] <sup><sup>0.0.4</sup></sup> Detect request for HLS stream at one port and
   
@@ -40,14 +54,17 @@
 
 - [ ] <sup><sup>0.0.5</sup></sup> Make monitor interface into a proper PWA (installable and all) - will serve as a basis for the (future) client app.
 
-- [ ] <sup><sup>0.0.6</sup></sup> Add some convinient form of authentication for push logic stream retranslation scheme for both:
+- [ ] <sup><sup>0.0.5</sup></sup> Add serving clients' web interface.
+
+- [ ] <sup><sup>0.0.6</sup></sup> Add some convenient form of authentication for push logic stream retranslation scheme for both:
   - [ ] <sup><sup>0.0.6</sup></sup> Client, providing the source HLS stream and
   
   - [ ] <sup><sup>0.0.6</sup></sup> Client, consuming the retranslated (broadcasting) HLS stream.
 
-- [ ] <sup><sup>0.0.7</sup></sup> Add some convinient form of authentication for pull logic stream retranslation scheme for both:
+- [ ] <sup><sup>0.0.7</sup></sup> Add some convenient form of authentication for pull logic stream retranslation scheme for both:
 
   - [ ] <sup><sup>0.0.7</sup></sup> Server, providing us with the source HLS stream (it authenticates with us, which grants it the power to setup our credentials to authenticate with it when we receive a clients' request and in turn request it to provide us with the source HLS stream) and
 
   - [ ] <sup><sup>0.0.7</sup></sup> Client, requesting the retranslated HLS stream from us.
   
+- [ ] <sup><sup>0.0.8</sup></sup> Add the end clients' web interface (possibly as a sub-view of serving clients' one, after all it's their target audience).
