@@ -16,20 +16,35 @@
 
 ### ToDo:
 
-- [x]<sup><sup>0.0.2</sup></sup> <del>Fix problem with simultaneous `@now/static-build` & `@now/node` builds.</del> (Moved back to pre-building the deployment package (in this case only a single transpile of `src/index.js` to `index.js`) and manually deploying it via `now; now alias`. To prevent (failed) attempts to autodeploy on GitHub™ commits added `/index.js` to `.gitignore`.)
-  - [ ]<sup><sup>0.0.2</sup></sup> Forbid autodeployments on GitHub™ commits via a proper `now.json` setting (as oppoosed to hiding the `@now/node` builder source file `/index.js`, which leads to unnecessary error messages from Now™ GitHub™ bot).
-- [x]<sup><sup>0.0.2</sup></sup> Generate and setup required logos & icons.
-- [ ]<sup><sup>0.0.3</sup></sup> Add simple video stream retranslation service (push logic):
-  - [ ]<sup><sup>0.0.3</sup></sup> Detect incoming HLS stream at one port and
-  - [ ]<sup><sup>0.0.3</sup></sup> Broadcast it via another port, unchanged.
-- [ ]<sup><sup>0.0.4</sup></sup> Add simple video stream retranslation service (pull logic):
-  - [ ]<sup><sup>0.0.4</sup></sup> Detect request for HLS stream at one port and
-  - [ ]<sup><sup>0.0.4</sup></sup> Access the pre-set source stream at another port and
-  - [ ]<sup><sup>0.0.4</sup></sup> Serve the (unchanged) source stream to the requesting client.
-- [ ]<sup><sup>0.0.5</sup></sup> Add some convinient form of authentication for push logic stream retranslation scheme for both:
-  - [ ]<sup><sup>0.0.5</sup></sup> Client, providing the source HLS stream and
-  - [ ]<sup><sup>0.0.5</sup></sup> Client, consuming the retranslated (broadcasting) HLS stream.
-- [ ]<sup><sup>0.0.6</sup></sup> Add some convinient form of authentication for pull logic stream retranslation scheme for both:
-  - [ ]<sup><sup>0.0.6</sup></sup> Server, providing us with the source HLS stream (it authenticates with us, which grants it the power to setup our credentials, to authenticate with it, when we receive a clients' request and in turn request it to provide us with the source HLS stream) and
-  - [ ]<sup><sup>0.0.6</sup></sup> Client, requesting the retranslated HLS stream from us.
-- [ ]<sup><sup>...</sup></sup> ...
+- [x] <sup><sup>0.0.2</sup></sup> <del>Fix problem with simultaneous `@now/static-build` & `@now/node` builds.</del> *(Moved back to pre-building the deployment package (in this case only a single transpile of `src/index.js` to `index.js`) and manually deploying it via `now; now alias`. To prevent (failed) attempts to autodeploy on GitHub™ commits added `/index.js` to `.gitignore`.)*
+
+  - [ ] <sup><sup>0.0.2</sup></sup> Forbid autodeployments on GitHub™ commits via a proper `now.json` setting (as oppoosed to hiding the `@now/node` builder source file `/index.js`, which leads to unnecessary error messages from Now™ GitHub™ bot).
+  
+- [x] <sup><sup>**0.0.2**</sup></sup> <del>Generate and setup required logos & icons.</del>
+
+- [ ] <sup><sup>0.0.3</sup></sup> Add simple video stream retranslation service (push logic):
+
+  - [ ] <sup><sup>0.0.3</sup></sup> Detect incoming HLS stream at one port and
+  
+  - [ ] <sup><sup>0.0.3</sup></sup> Broadcast it via another port, unchanged.
+
+- [ ] <sup><sup>0.0.4</sup></sup> Add simple video stream retranslation service (pull logic):
+
+  - [ ] <sup><sup>0.0.4</sup></sup> Detect request for HLS stream at one port and
+  
+  - [ ] <sup><sup>0.0.4</sup></sup> Access the pre-set source stream at another port and
+  
+  - [ ] <sup><sup>0.0.4</sup></sup> Serve the (unchanged) source stream to the requesting client.
+
+- [ ] <sup><sup>0.0.5</sup></sup> Add some convinient form of authentication for push logic stream retranslation scheme for both:
+  - [ ] <sup><sup>0.0.5</sup></sup> Client, providing the source HLS stream and
+  
+  - [ ] <sup><sup>0.0.5</sup></sup> Client, consuming the retranslated (broadcasting) HLS stream.
+
+- [ ] <sup><sup>0.0.6</sup></sup> Add some convinient form of authentication for pull logic stream retranslation scheme for both:
+
+- [ ] <sup><sup>0.0.6</sup></sup> Server, providing us with the source HLS stream (it authenticates with us, which grants it the power to setup our credentials, to authenticate with it, when we receive a clients' request and in turn request it to provide us with the source HLS stream) and
+
+- [ ] <sup><sup>0.0.6</sup></sup> Client, requesting the retranslated HLS stream from us.
+  
+- [ ] <sup><sup>...</sup></sup> ...
