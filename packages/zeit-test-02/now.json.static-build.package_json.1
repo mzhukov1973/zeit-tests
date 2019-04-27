@@ -7,7 +7,7 @@
  ],
  "builds": [
    { "src":"package.json", "use":"@now/static-build", "config":{"distDir":"build"} },
-   { "src":"index.js",     "use":"@now/node"                                       }
+   { "src":"build/index.js",     "use":"@now/node"                                 }
  ],
  "routes": [
    { "src":"^/(.*).ico",   "dest":"/$1.ico",   "headers":{"cache-control":"s-maxage=86400"} },
