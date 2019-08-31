@@ -1,4 +1,5 @@
 {
 "name": "zeit-test-01",
-"private": true
+"private": true,
+"version": "0.0.1"
 }
