@@ -1,0 +1,54 @@
+<%# locals used: locals.settings.title, locals.titlePostfix, locals.lang, locals.css, locals.user %>
+<%- include('includes/head.ejs', {title:locals.settings.title, titlePostfix:locals.titlePostfix, lang:locals.lang}); %>
+ <body>
+  <table border='1px'>
+   <tr><td style='padding:0 0.5em;text-align:right;'><strong>id:</strong></td><td style='padding:0 0.5em;text-align:left;'><code><%= locals.user.id %></code></tr>
+   <tr><td style='padding:0 0.5em;text-align:right;'><strong>username:</strong></td><td style='padding:0 0.5em;text-align:left;'><code><%= locals.user.username %></code></tr>
+   <tr><td style='padding:0 0.5em;text-align:right;'><strong>displayName:</strong></td><td style='padding:0 0.5em;text-align:left;'><code><%= locals.user.displayName %></code></tr>
+   <tr><td style='padding:0 0.5em;text-align:right;'><strong>emails:</strong></td><td style='padding:0 0.5em;text-align:left;'>
+   <% if (locals.user.emails) { %>
+   <%   locals.user.emails.forEach((el,idx)=>{ %>
+    <strong><%= (idx+1) %>.</strong><code>&nbsp;</code><code><a href='mailto:<%= el.value %>'><%= el.value %></a></code><br>
+   <%   }) %>
+   <% } else { %>
+     <code>None</code>
+   <% }%>
+   </td></tr>
+  </table>
+  <div><br><hr><a href='/logout'>Log out</a></div>
+ </body>
+</html>
+
+
+
+
+<%#
+locals: {
+ 'settings': {
+   'x-powered-by':                 false,
+   'etag':                         'weak',
+   'etag fn':                      { [length]:2, [name]:'generateETag', [prototype]:generateETag{[constructor]:[Circular]} },
+   'env':                          'production',
+   'query parser':                 'simple',
+   'query parser fn':              { [length]:4, [name]:'parse', [prototype]:parse{[constructor]:[Circular]} },
+   'subdomain offset':             2,
+   'trust proxy':                  false,
+   'trust proxy fn':               { [length]:0, [name]:'trustNone', [prototype]:trustNone{[constructor]:[Circular]} },
+   [@@symbol:trust_proxy_default]: true,
+   'view':                         { [length]:2, [name]:'View', [prototype]:View {[constructor]:[Circular], lookup:{[length]:1,[name]:'lookup',[prototype]:[lookup]}, render:{[length]:2,[name]:'render',[prototype]:[render]}, resolve:{[length]:2,[name]:'resolve',[prototype]:[resolve]}} },
+   'views':                        '/home/mzhukov/devel/zeit/zeit-pass/views',
+   'jsonp callback name':          'callback',
+   'title':                        'Zeit™Passᵦ',
+   'view cache':                   true,
+   'strict routing':               false,
+   'case sensitive routing':       false,
+   'view engine':                  'ejs',
+   'view options':                 { delimiter:'%',strict:true,_with:false,rmWhitespace:true,async:false }
+ },
+ 'lang':         'en',
+ 'titlePostfix': 'User Profile',
+ 'user':         { id:3,username:'max',password:'123456',displayName:'Maxim',emails:[{value:'max@example.com'},{value:'mzhukov31415@gmail.com'},{value:'mzhukov31415dev@gmail.com'}] },
+ '_locals':      [Object: null prototype] {},
+ 'cache':        true
+}
+%>

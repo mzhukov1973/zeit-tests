@@ -1,0 +1,31 @@
+<%# locals used: locals.settings.title, locals.titlePostfix, locals.lang, locals.css, locals.user %>
+<%- include('includes/head.ejs', {title:locals.settings.title, titlePostfix:locals.titlePostfix, lang:locals.lang}); %>
+ <body>
+ <% if (locals.user) { %>
+  <h1>
+   <div>
+    <div><img src='/images/logo-256x256.svg'>&nbsp;index.html</div>
+    <div>
+     <% if (!locals.user) { %>
+      Welcome! Please <a href="/login">log in</a>.
+     <% } else { %>
+      Hello, <%= locals.user.displayName %>. View your <a href="/profile">profile</a> or <a href="/logout">log out</a>.
+     <% } %>
+    </div>
+   </div>
+  </h1>
+ <% } %>
+  <hr>
+  <p>This is a placeholder for <code>index.html</code> file from root folder the webserver (served dynamically by <code>app.get(...)</code> and views, written in EJS).</p>
+  <p><a href='/login'>Link</a><sup><sup><a href='/login'>'/login'</a></sup></sup> to the login page (served dynamically by <code>app.get(...)</code> and views, written in EJS).</p>
+  <p><a href='/logout'>Link</a><sup><sup><a href='/logout'>'/logout'</a></sup></sup> to logout if you were logged in before (served dynamically by <code>app.get(...)</code>).</p>
+  <p><a href='/profile'>Link</a><sup><sup><a href='/profile'>'/profile'</a></sup></sup> to the user profile page (served dynamically by <code>app.get(...)</code> and views, written in EJS).</p>
+  <p>Fonts test:</p>
+  <ol>
+   <li style='font-weight:400;font-style:normal;'>...S<i>om</i>e <strong>Code</strong>... --- И по-русски. (in 'Noto Sans Display, 400, normal')</li>
+   <li style='font-weight:400;font-style:italic;'>...S<i>om</i>e <strong>Code</strong>... --- И по-русски. (in 'Noto Sans Display, 400, italic') </li>
+   <li style='font-weight:700;font-style:normal;'>...S<i>om</i>e <strong>Code</strong>... --- И по-русски. (in 'Noto Sans Display, 700, normal')</li>
+   <li style='font-weight:700;font-style:italic;'>...S<i>om</i>e <strong>Code</strong>... --- И по-русски. (in 'Noto Sans Display, 700, italic')</li>
+  </ol>
+ </body>
+</html>

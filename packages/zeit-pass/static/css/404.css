@@ -1,0 +1,38 @@
+html {
+  height: calc(100% - 2rem);
+}
+body {
+  height: 100%;
+  text-align:       center;
+  background-color: beige;
+  display:          flex;
+  flex-flow:        column nowrap;
+  justify-content:  center;
+  align-items:      stretch;
+}
+
+.titl {
+  order: 0;
+  font-size:   3rem;
+  font-weight: bold;
+  font-style:  normal;
+  text-shadow: 0.5rem 0.5rem 0.75rem rgba(0,0,0,0.5);
+}
+
+hr.titl {
+  width: 40%;
+}
+
+.frst {
+  order: 1;
+  font-size:   10rem;
+  font-weight: bold;
+  font-style:  normal;
+}
+
+.scnd {
+  order: 2;
+  font-size:   4rem;
+  font-weight: bold;
+  font-style:  italic;
+}

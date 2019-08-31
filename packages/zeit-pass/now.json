@@ -1,0 +1,32 @@
+{
+ "version": 2,
+ "name": "zeit-pass",
+ "alias": [ "zeit-pass" ],
+ "env": {
+ },
+ "public": false,
+ "github": { "enabled":false, "autoAlias":false, "silent":false, "autoJobCancelation":true },
+ "builds": [
+   { "src":"/js/*.js",                     "use":"@now/static"      },
+   { "src":"/js/backEnds/*.js",            "use":"@now/static"      },
+   { "src":"/css/*.css",                   "use":"@now/static"      },
+   { "src":"/static/fonts/*",              "use":"@now/static"      },
+   { "src":"/static/images/*",             "use":"@now/static"      },
+   { "src":"/data",                        "use":"@now/static"      },
+   { "src":"/data/SessionStore.FileStore", "use":"@now/static"      },
+   { "src":"/index.js",                    "use":"@now/node-server" },
+   { "src":"/favicon.ico",                 "use":"@now/static"      },
+   { "src":"/404.html",                    "use":"@now/static"      }
+ ],
+ "routes": [
+   { "src":"^/js/(.*).js",                       "dest":"/js/$1.js"                                                                                    },
+   { "src":"^/js/backEnds/(.*).js",              "dest":"/js/backEnds/$1.js"                                                                           },
+   { "src":"^/css/(.*)",                         "dest":"/css/$1"                                                                                      },
+   { "src":"^/static/(.*)",                      "dest":"/static/$1",                      "headers":{ "cache-control":"s-maxage=31536000,immutable" } },
+   { "src":"^/data/(.*)",                        "dest":"/data/$1",                        "headers":{ "cache-control":"s-maxage=0" }                  },
+   { "src":"^/data/SessionStore.FileStore/(.*)", "dest":"/data/SessionStore.FileStore/$1", "headers":{ "cache-control":"s-maxage=0" }                  },
+   { "src":"^/index.js",                         "dest":"/index.js"                                                                                    },
+   { "src":"^/favicon.ico",                      "dest":"/favicon.ico",                    "headers":{ "cache-control":"s-maxage=31536000,immutable" } },
+   { "src":"^/(.*)",                             "dest":"/404.html",                       "headers":{ "cache-control":"s-maxage=31536000,immutable" } }
+ ]
+}

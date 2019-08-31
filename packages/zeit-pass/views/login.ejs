@@ -1,0 +1,25 @@
+<%# locals used: locals.settings.title, locals.titlePostfix, locals.lang, locals.css, locals.user %>
+<%- include('includes/head.ejs', {title:locals.settings.title, titlePostfix:locals.titlePostfix, lang:locals.lang}); %>
+ <body>
+
+  <div>
+   <label>Sign in with Username/Password</label>
+   <form action="/login" method="post">
+    <div><label>Username:</label>&nbsp;<input type="text" name="username"/><br/></div>
+    <div><label>Password:</label>&nbsp;<input type="password" name="password"/></div>
+    <div><input type="submit" value="Sign In"/></div>
+   </form>
+  </div>
+
+  <hr>
+
+  <div><label>Sign in with Google (OAuth2.0)</label>&nbsp;<a href="/auth/google-oauth20">Sign In</a></div>
+  <div><label>Sign in with Google (OpenID)</label>&nbsp;<a href="/auth/google">Sign In</a></div>
+  <div><label>Sign in with Twitter</label>&nbsp;<a href="/auth/twitter">Sign In</a></div>
+  <div><label>Sign in with Auth0</label>&nbsp;<a href="/auth/auth0">Sign In</a></div>
+  <div><label>Sign in with GitHub2</label>&nbsp;<a href="/auth/github2">Sign In</a></div>
+
+  <hr>
+
+ </body>
+</html>

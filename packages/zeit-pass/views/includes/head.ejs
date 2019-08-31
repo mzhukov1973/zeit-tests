@@ -1,0 +1,22 @@
+<%# locals used: locals.lang, locals.title, locals.titlePostfix, locals.css %>
+<!doctype html>
+<html lang='<%= locals.lang %>'>
+ <head>
+  <meta charset='utf-8'>
+  <title><%= locals.titlePostfix.length>0?'['+locals.title+'] '+locals.titlePostfix:locals.title %></title>
+  <link rel='preload'       type='font/woff2'   href='/fonts/NotoSansDisplay-RegularNormal.woff2' as='font' crossorigin='anonymous'>
+  <link rel='preload'       type='font/woff2'   href='/fonts/NotoSansDisplay-RegularItalic.woff2' as='font' crossorigin='anonymous'>
+  <link rel='preload'       type='font/woff2'   href='/fonts/NotoSansDisplay-BoldNormal.woff2'    as='font' crossorigin='anonymous'>
+  <link rel='preload'       type='font/woff2'   href='/fonts/NotoSansDisplay-BoldItalic.woff2'    as='font' crossorigin='anonymous'>
+  <link rel='preload'       type='text/css'     href='/css/NotoSansDisplay-BRI.css'               as='style'                       >
+  <link rel='preload'       type='text/css'     href='/css/base.css'                              as='style'                       >
+  <% if (locals.css) { %><link rel='preload' type='text/css' href='/css/<%= locals.css %>' as='style'><% } %>
+  <link rel='stylesheet'    type='text/css'     href='/css/NotoSansDisplay-BRI.css'>
+  <link rel='stylesheet'    type='text/css'     href='/css/base.css'>
+  <% if (locals.css) { %><link rel='stylesheet' type='text/css' href='/css/<%= locals.css %>'><% } %>
+  <link rel='shortcut icon' type='image/x-icon' href='/favicon.ico'                               sizes='16x16 24x24 32x32 48x48 64x64 128x128'>
+  <link rel='icon'          type='image/png'    href='/images/android-chrome-192x192.png'         sizes='192x192'                              >
+  <link rel='icon'          type='image/png'    href='/images/android-chrome-194x194.png'         sizes='194x194'                              >
+  <link rel='icon'          type='image/png'    href='/images/android-chrome-256x256.png'         sizes='256x256'                              >
+  <link rel='icon'          type='image/png'    href='/images/android-chrome-512x512.png'         sizes='512x512'                              >
+ </head>
