@@ -1,0 +1,48 @@
+{
+  "name":        "zeit-test-02a",
+  "short_name":  "Zeitᵦ|²ᵃ",
+  "description": "An app to play a client to zeit-test-02's video stream watermarking λ. Streams a video. Deploys locally.",
+  "version":     "0.0.1",
+  "author": {
+    "name": "Maxim Zhukov", "email": "mzhukov31415dev@gmail.com", "url": "https://github.com/mzhukov1973"
+  },
+  "license":  "Apache-2.0",
+  "private":  true,
+  "homepage": "https://zeit-test-02a.umbra-translucens.online",
+  "dependencies":         {
+    "colors": "latest"
+  },
+  "bundleDependencies":   [
+    "colors"
+  ],
+  "peerDependencies":     {},
+  "optionalDependencies": {},
+  "devDependencies": {
+    "@babel/cli":        "latest",
+    "@babel/core":       "latest",
+    "@babel/preset-env": "latest"
+  },
+ "bugs":       { "email":"mzhukov31415dev@gmail.com", "url":"https://github.com/mzhukov1973/zeit-test-02a/issues" },
+ "repository": "git+https://github.com/mzhukov1973/zeit-test-02a",
+ "main":       "build/index.js",
+ "scripts": {
+   "lint":  "eslint src/*.js",
+   "build": "bash build.sh",
+   "run":   "node build/index.js",
+   "bnr":   "npm run build && node build/index.js"
+ },
+ "files": [
+   "build/index.js",
+   "build/logs",
+   "build/source-videos",
+   "build/public",
+   "build/public/index.html",
+   "build/public/404.html"
+ ],
+ "engines": {
+   "node": ">=11.12.0"
+ },
+ "babel": {
+   "presets": [["@babel/preset-env", {"targets":{"node":true}}]]
+ }
+}
