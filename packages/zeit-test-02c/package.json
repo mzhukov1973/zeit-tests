@@ -1,0 +1,65 @@
+{
+  "name": "zeit-test-02c",
+  "short_name": "Zeitᵦ|²ᶜ",
+  "description": "An app to stream an HLS to zeit-test-02's video stream watermarking λ. Streams a video, using hls-server. Deploys locally.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxim Zhukov",
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": "https://zeit-test-02c.umbra-translucens.online",
+  "dependencies": {
+    "colors": "latest",
+    "hls-server": "latest"
+  },
+  "bundleDependencies": [
+    "colors",
+    "hls-server"
+  ],
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bugs": {
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973/zeit-test-02c/issues"
+  },
+  "repository": "git+https://github.com/mzhukov1973/zeit-test-02c",
+  "main": "build/index.js",
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "build": "bash build.sh",
+    "run": "cd build && node index.js && cd ..",
+    "bnr": "npm run build && cd build && node index.js && cd .."
+  },
+  "files": [
+    "build/index.js",
+    "build/hls-server.js",
+    "build/logs",
+    "build/source-videos",
+    "build/public",
+    "build/public/index.html",
+    "build/public/404.html"
+  ],
+  "engines": {
+    "node": ">=11.12.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ]
+  }
+}
