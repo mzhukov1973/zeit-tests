@@ -39,8 +39,8 @@
     "microauth-slack": "latest",
     "microauth-twitter": "latest",
     "microauth-vkontakte": "latest",
-    "serve-handler": "latest",
     "request": "latest",
+    "serve-handler": "latest",
     "yargs": "next"
   },
   "bundleDependencies": [
