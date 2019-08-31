@@ -1,0 +1,14 @@
+.git
+dist
+build
+build_internal
+node_modules
+src
+static.src
+.gitignore
+LICENSE
+README.md
+*.sh
+*.js
+*.tgz
+*.old
