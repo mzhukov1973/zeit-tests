@@ -1,0 +1,33 @@
+/*************************************/
+/*  Noto Sans Display (woff2)        */
+/*   - Regular(400) / Regular Italic */
+/*   - Bold(700)    / Bold Italic    */
+/*************************************/
+@font-face {
+  font-family: 'Noto Sans Display';
+  font-style:   normal;
+  font-weight:  400;
+  font-display: swap;
+  src: url('/fonts/NotoSansDisplay-RegularNormal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans Display';
+  font-style:   italic;
+  font-weight:  400;
+  font-display: swap;
+  src: url('/fonts/NotoSansDisplay-RegularItalic.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans Display';
+  font-style:   normal;
+  font-weight:  700;
+  font-display: swap;
+  src: url('/fonts/NotoSansDisplay-BoldNormal.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans Display';
+  font-style:   italic;
+  font-weight:  700;
+  font-display: swap;
+  src: url('/fonts/NotoSansDisplay-BoldItalic.woff2') format('woff2');
+}
