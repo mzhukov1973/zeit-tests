@@ -1,0 +1,67 @@
+{
+  "name": "zeit-test-04",
+  "short_name": "Zeitᵦ|⁴",
+  "description": "A Zeit™-based `λ` shell terminal, to eventually run secure remote sessions.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxim Zhukov",
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": "https://zeit-test-04.umbra-translucens.online",
+  "dependencies": {
+    "colors": "latest",
+    "shell.js": "latest",
+    "shelljs": "latest"
+  },
+  "bundleDependencies": [
+    "colors",
+    "shell.js",
+    "shelljs"
+  ],
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/preset-env": "latest"
+  },
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bugs": {
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973/zeit-test-04/issues"
+  },
+  "repository": "git+https://github.com/mzhukov1973/zeit-test-04",
+  "main": "build/index.js",
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "build": "bash build.sh",
+    "run": "cd build && node index.js && cd ..",
+    "deploy": "cd build && now && now alias && cd ..",
+    "bnr": "npm run build && npm run run",
+    "bnd": "npm run build && npm run deploy"
+  },
+  "files": [
+    "build/index.js",
+    "build/shelljs.js",
+    "build/public",
+    "build/public/index.html",
+    "build/logs"
+  ],
+  "engines": {
+    "node": ">=11.12.0"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ]
+  }
+}

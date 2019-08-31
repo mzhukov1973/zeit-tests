@@ -1,0 +1,24 @@
+{
+ "version": 2,
+ "name":    "zeit-test-04",
+ "public":  false,
+ "alias": [
+   "zeit-test-04.umbra-translucens.online"
+ ],
+ "builds": [
+   { "src":"/public/index.html",  "use":"@now/html-minifier" },
+   { "src":"/public/favicon.ico", "use":"@now/static"        },
+   { "src":"/public/favicon.png", "use":"@now/static"        },
+   { "src":"/shelljs.js",         "use":"@now/static"        },
+   { "src":"/index.js",           "use":"@now/node"          }
+ ],
+ "routes": [
+   { "src":"^/public/(.*).ico", "dest":"/$1.ico",     "headers":{"cache-control":"s-maxage=31536000, immutable"} },
+   { "src":"^/public/(.*).png", "dest":"/$1.png",     "headers":{"cache-control":"s-maxage=31536000, immutable"} },
+   { "src":"^/public/(.*).svg", "dest":"/$1.svg",     "headers":{"cache-control":"s-maxage=31536000, immutable"} },
+   { "src":"^/public/(.*).css", "dest":"/$1.css",     "headers":{"cache-control":"s-maxage=31536000, immutable"} },
+   { "src":"^/public/(.*)",     "dest":"/index.html", "headers":{"cache-control":"s-maxage=31536000, immutable"} },
+   { "src":"^/shelljs.js",      "dest":"/shelljs.js"                                                             },
+   { "src":"^/(.*)",            "dest":"/index.js"                                                               }
+ ]
+}
