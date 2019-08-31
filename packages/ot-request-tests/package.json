@@ -1,0 +1,32 @@
+{
+  "name": "ot-request-tests",
+  "short_name": "ot-request-tests",
+  "description": "A local app to test ot-* req/res interfaces.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxim Zhukov",
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "dependencies": {
+    "atob": "latest",
+    "btoa": "latest",
+    "request": "latest",
+    "yargs": "next"
+  },
+  "bundleDependencies": [
+    "atob",
+    "btoa",
+    "yargs",
+    "request"
+  ],
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "run": "node ./index.js"
+  },
+  "main": "index.js"
+}
