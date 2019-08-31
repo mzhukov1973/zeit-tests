@@ -1,0 +1,127 @@
+{
+  "config": {
+    "internalBuildDir": "build_internal",
+    "buildDir": "build",
+    "name": "$npm_package_name",
+    "version": "$npm_package_version",
+    "jsFiles": [
+      "index.js",
+      "cryptoUtils.js",
+      "storUtils.js"
+    ]
+  },
+  "name": "ot-db",
+  "short_name": "Zeit:OTDb",
+  "description": "A Node.js / Micro™ app, working as a private database-as-a-service. To be deployed at Zeit™.",
+  "version": "0.0.1",
+  "author": {
+    "name": "Maxim Zhukov",
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973"
+  },
+  "license": "Apache-2.0",
+  "private": true,
+  "homepage": "https://ot-db.umbra-translucens.online",
+  "dependencies": {
+    "@babel/runtime-corejs3": "latest",
+    "argon2": "latest",
+    "atob": "latest",
+    "btoa": "latest",
+    "micro": "latest",
+    "micro-compress": "latest",
+    "micro-encrypt": "latest",
+    "micro-mw": "latest",
+    "micro-urlencoded": "latest",
+    "request": "latest",
+    "serve-handler": "latest",
+    "yargs": "next"
+  },
+  "bundleDependencies": [
+    "@babel/runtime-corejs3",
+    "argon2",
+    "atob",
+    "btoa",
+    "micro",
+    "micro-compress",
+    "micro-encrypt",
+    "micro-mw",
+    "micro-urlencoded",
+    "serve-handler",
+    "yargs",
+    "request"
+  ],
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "devDependencies": {
+    "@babel/cli": "latest",
+    "@babel/core": "latest",
+    "@babel/plugin-transform-runtime": "latest",
+    "@babel/preset-env": "latest"
+  },
+  "bugs": {
+    "email": "mzhukov31415dev@gmail.com",
+    "url": "https://github.com/mzhukov1973/ot-db/issues"
+  },
+  "repository": "git+https://github.com/mzhukov1973/ot-db",
+  "scripts": {
+    "lint": "eslint src/*.js",
+    "bash": "bash",
+    "node": "node",
+    "build": "npm run bash -- build.sh $npm_package_config_internalBuildDir $npm_package_config_buildDir $npm_package_config_name $npm_package_config_version",
+    "prepdeploy": "npm run node -- now__prepare_deploy.js -p $npm_package_config_name -d $npm_package_config_name.umbra-translucens.online -b $npm_package_config_buildDir",
+    "deploy": "npm run bash -- now__deploy.sh $npm_package_config_internalBuildDir $npm_package_config_buildDir $npm_package_config_name $npm_package_config_version",
+    "fulldeploy": "npm run prepdeploy && npm run deploy",
+    "bpdeploy": "npm run build && npm run prepdeploy",
+    "bfdeploy": "npm run build && npm run fulldeploy",
+    "bdeploy": "npm run bfdeploy",
+    "bnd": "npm run bdeploy",
+    "clean": "npm run bash -- clean.sh $npm_package_config_internalBuildDir $npm_package_config_buildDir $npm_package_config_name $npm_package_config_version",
+    "start": "micro"
+  },
+  "files": [
+    "build/now.json",
+    "build/package.json",
+    "build/*.js",
+    "build/data",
+    "build/data/*",
+    "build/static",
+    "build/static/*",
+    "build/static/css",
+    "build/static/css/*",
+    "build/static/fonts",
+    "build/static/fonts/*",
+    "build/static/images",
+    "build/static/images/*"
+  ],
+  "main": "build/index.js",
+  "engines": {
+    "node": ">=12.3.1"
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": true
+          }
+        }
+      ]
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-transform-runtime",
+        {
+          "absoluteRuntime": false,
+          "corejs": {
+            "version": 3,
+            "proposals": true
+          },
+          "helpers": true,
+          "regenerator": true,
+          "useESModules": false
+        }
+      ]
+    ]
+  }
+}

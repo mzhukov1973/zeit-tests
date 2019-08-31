@@ -1,0 +1,5 @@
+# This line is a comment (N.B.: the line MUST start with '#' or it won't be considered a comment).
+# The rest of the file is some sort of JSON. (Probably. For now.)
+
+# Hash of the whole file:
+# Line format: <linestart>hashAlgo:hashAlgoParameters:digestEncoding:encodedHashItself:comment<EOL>
